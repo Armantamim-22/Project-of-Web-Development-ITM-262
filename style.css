@@ -1,0 +1,308 @@
+/* ========== Base styles ========== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px; /* sticky header er jonno space */
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  background: #f5f7fb;
+  color: #222;
+}
+
+/* Layout wrapper */
+main,
+header,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ========== Header & Nav (Sticky) ========== */
+header {
+  padding: 1rem 1rem 0.75rem;
+  background: #ffffff;
+  color: #111827;
+  border-bottom: 1px solid #e5e7eb;
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  gap: 0.75rem;
+}
+
+/* Nav links with hover effect */
+nav a {
+  text-decoration: none;
+  color: #1f4b8f;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  background: #f9fafb;
+  transition: background-color 0.2s ease, color 0.2s ease,
+              transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  background: #1f4b8f;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(15, 23, 42, 0.18);
+}
+
+/* ========== Main content blocks ========== */
+main {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+section,
+article {
+  background: #ffffff;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.25rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+h2 {
+  margin-top: 0;
+  color: #1f4b8f;
+}
+
+h3 {
+  margin-bottom: 0.4rem;
+  color: #173765;
+}
+
+/* ========== Speaker Section ========== */
+.speaker-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.speaker-info {
+  flex: 1 1 60%;
+}
+
+.speaker-photo {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Balanced Speaker Image Size (Desktop) */
+.speaker-photo img {
+  width: 100%;
+  max-width: 330px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Note under the image */
+.note-below-photo {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-left: 4px solid #f59e0b;
+  background: #fff7e6;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* ========== Media (video) ========== */
+figure {
+  margin: 1rem 0;
+}
+
+video {
+  max-width: 100%;
+  display: block;
+}
+
+figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ========== Table ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+caption {
+  caption-side: top;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+thead {
+  background: #e5edf9;
+}
+
+th,
+td {
+  border: 1px solid #cbd5f5;
+  padding: 0.6rem 0.5rem;
+  text-align: left;
+}
+
+th[scope="row"] {
+  background: #f3f4ff;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background: #f8fafc;
+}
+
+tfoot td {
+  text-align: center;
+  font-style: italic;
+  background: #e5edf9;
+}
+
+/* ========== WORK / CARDS SECTION (Event Highlights) ========== */
+.work-section {
+  /* section already has card-like background & shadow */
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-top: 1rem;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e6e8ef;
+  border-radius: 12px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.16);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.card h3,
+.card p,
+.card .btn {
+  padding: 0 1rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Button style reused in cards */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #1f4b8f;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  margin: 0.25rem 1rem 1rem;
+  transition: background-color 0.18s ease, transform 0.15s ease,
+              box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #173765;
+  opacity: 0.95;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+/* ========== Contact + Footer ========== */
+address {
+  font-style: normal;
+}
+
+footer {
+  padding: 1rem 1rem 1.5rem;
+  background: #111827;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+footer address {
+  margin-bottom: 0.25rem;
+}
+
+/* ========== Responsive tweaks (Mobile View) ========== */
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav {
+    gap: 0.4rem;
+  }
+
+  nav a {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .speaker-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Mobile speaker image */
+  .speaker-photo img {
+    max-width: 260px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; /* cards ek column e stack hobe */
+  }
+}
