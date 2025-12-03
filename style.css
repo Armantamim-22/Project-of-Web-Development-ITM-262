@@ -1,11 +1,11 @@
-/* ========== Base styles ========== */
+
 * {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px; /* sticky header er jonno space */
+  scroll-padding-top: 120px; 
 }
 
 body {
@@ -26,7 +26,6 @@ footer {
   padding: 0 1rem;
 }
 
-/* ========== Header & Nav (Sticky) ========== */
 header {
   padding: 1rem 1rem 0.75rem;
   background: #ffffff;
@@ -48,8 +47,6 @@ nav {
   flex-wrap: wrap-reverse;
   gap: 0.75rem;
 }
-
-/* Nav links with hover effect */
 nav a {
   text-decoration: none;
   color: #1f4b8f;
@@ -69,8 +66,6 @@ nav a:focus {
   transform: translateY(-1px);
   box-shadow: 0 3px 8px rgba(15, 23, 42, 0.18);
 }
-
-/* ========== Main content blocks ========== */
 main {
   padding-top: 1.5rem;
   padding-bottom: 2rem;
@@ -94,8 +89,6 @@ h3 {
   margin-bottom: 0.4rem;
   color: #173765;
 }
-
-/* ========== Speaker Section ========== */
 .speaker-container {
   display: flex;
   gap: 1.5rem;
@@ -113,7 +106,6 @@ h3 {
   justify-content: center;
 }
 
-/* Balanced Speaker Image Size (Desktop) */
 .speaker-photo img {
   width: 100%;
   max-width: 330px;
@@ -123,7 +115,6 @@ h3 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-/* Note under the image */
 .note-below-photo {
   margin-top: 1rem;
   padding: 0.8rem 1rem;
@@ -132,8 +123,6 @@ h3 {
   border-radius: 0.5rem;
   font-size: 0.95rem;
 }
-
-/* ========== Media (video) ========== */
 figure {
   margin: 1rem 0;
 }
@@ -148,8 +137,6 @@ figcaption {
   font-size: 0.9rem;
   color: #555;
 }
-
-/* ========== Table ========== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -188,11 +175,6 @@ tfoot td {
   text-align: center;
   font-style: italic;
   background: #e5edf9;
-}
-
-/* ========== WORK / CARDS SECTION (Event Highlights) ========== */
-.work-section {
-  /* section already has card-like background & shadow */
 }
 
 .cards {
@@ -236,7 +218,6 @@ tfoot td {
   margin-bottom: 1rem;
 }
 
-/* Button style reused in cards */
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -258,7 +239,6 @@ tfoot td {
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
 }
 
-/* ========== Contact + Footer ========== */
 address {
   font-style: normal;
 }
@@ -273,8 +253,6 @@ footer {
 footer address {
   margin-bottom: 0.25rem;
 }
-
-/* ========== Responsive tweaks (Mobile View) ========== */
 @media (max-width: 768px) {
 
   header h1 {
@@ -295,7 +273,6 @@ footer address {
     text-align: center;
   }
 
-  /* Mobile speaker image */
   .speaker-photo img {
     max-width: 260px;
     height: 300px;
@@ -303,6 +280,7 @@ footer address {
   }
 
   .cards {
-    grid-template-columns: 1fr; /* cards ek column e stack hobe */
+    grid-template-columns: 1fr; 
   }
 }
+
